@@ -1,0 +1,150 @@
+
+ol.dict_list {
+	display: block					!important;
+	list-style-type: decimal		!important;
+	line-height: 1					!important;
+	font-size: 10pt																	!important;
+	font-family: "Times New Roman", Times, serif									!important;
+	-webkit-margin-before: 1em		!important;
+	-webkit-margin-after: 1em		!important;
+	-webkit-margin-start: 0px		!important;
+	-webkit-margin-end: 10px		!important;
+	-webkit-padding-start: 40px		!important;
+	-moz-margin-before: 1em			!important;
+	-moz-margin-after: 1em			!important;
+	-moz-margin-start: 0px			!important;
+	-moz-margin-end: 10px			!important;
+	-moz-padding-start: 40px		!important;
+}
+li.dict_list_li {
+	font-size: 10pt																	!important;
+	font-family: "Times New Roman", Times, serif									!important;
+	line-height: 1					!important;
+	margin: 0px						!important;
+}
+ul.dict_samp_list {
+	list-style: none				!important;
+	margin-left: 0					!important;
+	padding-left: 1.2em				!important;
+	text-indent: -1.2em				!important;
+	font-size: 10pt																	!important;
+	font-family: "Times New Roman", Times, serif									!important;
+	line-height: 1					!important;
+}
+li.dict_samp_li {
+	font-size: 10pt																	!important;
+	font-family: "Times New Roman", Times, serif									!important;
+	line-height: 1					!important;
+	margin: 0px						!important;
+}
+li.dict_samp_li:before {
+	content: "\2192"				!important;
+	display: block					!important;
+	float: left						!important;
+	width: 1.2em					!important;
+}
+/* Pure CSS speech bubbles from http://nicolasgallagher.com/pure-css-speech-bubbles/ */
+div.dict_bubble {
+	display: block																	!important;
+	position: absolute																!important;
+	width: 400px																	!important;
+	height: auto																	!important;
+	text-shadow: none																!important;
+	color: Black																	!important;
+	opacity: 1.0																	!important;
+	filter: alpha(opacity=100)														!important;
+	padding: 5px																	!important;
+	z-index: 2000000000																!important;
+	vertical-align: middle															!important;
+	text-align: left																!important;
+	font-size: 10pt																	!important;
+	font-family: "Times New Roman", Times, serif									!important;
+	background: #ffe76e	 															!important;
+	/* css3 */
+	border: #ccaa00 2px solid														!important;
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffe76e), to(#fff5c2))	!important;
+	background:-moz-linear-gradient(#ffe76e, #fff5c2)								!important;
+	background:-o-linear-gradient(#ffe76e, #fff5c2)									!important;
+	background:linear-gradient(#ffe76e, #fff5c2)									!important;
+	-webkit-border-radius:10px														!important;
+	-moz-border-radius:10px															!important;
+	border-radius:10px																!important;
+}
+div.dict_content {
+	overflow-y: auto																!important;
+	overflow-x: hidden																!important;
+	max-height: 300px																!important;
+	letter-spacing: 0px																!important;
+	line-height: 1																	!important;
+}
+div.dict_bubble.top {
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffe76e), to(#fff5c2));
+  background:-moz-linear-gradient(#ffe76e, #fff5c2);
+  background:-o-linear-gradient(#ffe76e, #fff5c2);
+  background:linear-gradient(#ffe76e, #fff5c2);
+}
+/* creates triangle */
+div.dict_bubble:before {
+  content:"";
+  position:absolute;
+  top:-19px; /* value = - border-top-width - border-bottom-width */
+  right:335px; /* controls horizontal position */
+  border-width:14px 20px 0; /* vary these values to change the angle of the vertex */
+  border-style:solid;
+  border-color:#ccaa00 transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+div.dict_bubble:after {
+  content:"";
+  position:absolute;
+  top:-15px; /* value = - border-top-width - border-bottom-width */
+  right:335px; /* controls horizontal position */
+  border-width:10px 16px 0; /* vary these values to change the angle of the vertex */
+  border-style:solid;
+  border-color:#ffe76e transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+div.dict_bubble.top:before {
+  top:-18px; /* value = - border-top-width - border-bottom-width */
+  right:333px; /* controls horizontal position */
+  bottom:auto;
+  left:auto;
+  border-width:0 12px 18px; /* vary these values to change the angle of the vertex */
+  border-color:#ccaa00 transparent;
+}
+div.dict_bubble.top:after {
+  top:-15px; /* value = - border-top-width - border-bottom-width */
+  right:335px; /* controls horizontal position */
+  bottom:auto;
+  left:auto;
+  border-width:0 10px 16px; /* vary these values to change the angle of the vertex */
+  border-color:#ffe76e transparent;
+}
+/* https://css-tricks.com/custom-scrollbars-in-webkit/ */
+div.dict_content::-webkit-scrollbar {
+	width: 6px;
+}
+ 
+/* Track */
+div.dict_content::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+ 
+/* Handle */
+div.dict_content::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 4px;
+	background-clip: padding-box;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background-color: rgba(173,145,0,0.8); 
+	-webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.5), inset 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+div.dict_content::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(173,145,0,0.4); 
+}
